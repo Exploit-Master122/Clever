@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>About:Blank Launcher</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f0f0f0;
+      font-family: sans-serif;
+    }
+    button {
+      padding: 12px 24px;
+      font-size: 18px;
+      border: none;
+      background-color: #2d70f6;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <button onclick="launch()">Launch</button>
+
+  <script>
+    function launch() {
+      const win = window.open("about:blank");
+      const html = `
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Clever Login</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Helvetica Neue", sans-serif;
+      background: #f5f5f5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    .login-box {
+      background: white;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .login-box img {
+      width: 120px;
+      margin-bottom: 20px;
+    }
+    .login-box h2 {
+      margin: 0 0 20px;
+      color: #333;
+    }
+    .login-box input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+    .login-box button {
+      width: 100%;
+      padding: 12px;
+      background-color: #2d70f6;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .error {
+      color: red;
+      margin-top: 10px;
+    }
+    iframe {
+      width: 100vw;
+      height: 100vh;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-box" id="login">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Clever_logo.svg/2560px-Clever_logo.svg.png" alt="Clever logo"/>
+    <h2>Log in with your school</h2>
+    <input type="text" placeholder="Enter your school name" id="schoolInput" />
+    <button onclick="checkPassword()">Log in</button>
+    <div class="error" id="errorMsg"></div>
+  </div>
+
+  <script>
+    function checkPassword() {
+      const input = document.getElementById("schoolInput").value.trim();
+      if (input === "5084820933") {
+        document.body.innerHTML = '<iframe src="https://exploit-master122.github.io/DarrkonOS/"></iframe>';
+      } else {
+        document.getElementById("errorMsg").innerText = "School not found. Please try again.";
+      }
+    }
+  </script>
+</body>
+</html>`;
+      win.document.write(html);
+      win.document.close();
+    }
+  </script>
+</body>
+</html>
